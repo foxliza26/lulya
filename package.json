@@ -4,24 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js", 
+    "start": "node index.js",
     "dev": "supervisor index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/foxliza26/lulya.git"
   },
-
-
   "author": "ll",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/foxliza26/lulya/issues"
   },
   "homepage": "https://github.com/foxliza26/lulya#readme",
-
   "dependencies": {
     "lowdb": "^1.0.0",
+    "nanoid": "^3.3.1",
     "socket.io": "^3.1.0",
     "supervisor": "^0.12.0"
   }

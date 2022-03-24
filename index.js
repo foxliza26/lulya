@@ -1,4 +1,4 @@
-const { Socket } = require('socket.io')
+
 
 //Создаем ХТТП-сервер
 const server = require ('http').createServer ()
@@ -12,11 +12,23 @@ const io = require('socket.io') (server, {
 })
 const log = console.log
 
+const registermessageHandlers = require ('./handlers/messageHandlers')
+const registeruserHandlers = require ('./handlers/userHandlers')
+
+
+
 //обработчик события
 //функция выполняется при подключении сервера
 
-const onConnection = (Socket) => {
+const onConnection = (socket) => {
+//выводим сообщение о подключении пользователя
+    log('User connected')
+
+    socket.on('disconnect',() => {
+        log('user disconnected')
+    })
 }
+
 
 //обрабатывает подключение
 io.on ('connection', onConnection)
