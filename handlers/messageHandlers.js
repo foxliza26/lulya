@@ -14,7 +14,7 @@ db.defaults({
             messageId: '1', 
             userId: '1',
             senderName: 'Олежка', 
-            messageText: 'Попробуль люль - настанет июль',
+            messageText: 'Попробуй люль - настанет июль',
             createdAt: '2007-07-07',
             avatar: 'https://tlgrm.ru/_/stickers/96b/f1e/96bf1eca-a75d-3b7c-b620-bb5f2cdac89f/4.jpg'
           
@@ -25,7 +25,7 @@ db.defaults({
         messageId: '2', 
         userId: '2',
         senderName: 'Иришка', 
-        messageText: 'Попровала - настал',
+        messageText: 'Попробовала - настал',
         createdAt: '2007-07-07',
         avatar:'https://famous-scientists.ru/photo/i6555.jpg'
         
@@ -38,6 +38,7 @@ db.defaults({
 module.exports = (io, socket) =>  {
     
     const getMessages = () => {
+        console.log ('getMessages')
         const messages = db.get('messages').value ()
         io.emit('messages', messages)
     }
@@ -46,7 +47,7 @@ module.exports = (io, socket) =>  {
         db.get ('messages')
         .push ({
             messageId: nanoid (8),
-            createdAt: new Data (),
+            createdAt: new Date (),
             ... message
 
         }

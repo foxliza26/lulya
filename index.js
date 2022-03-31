@@ -24,6 +24,9 @@ const onConnection = (socket) => {
 //выводим сообщение о подключении пользователя
     log('User connected')
 
+    registermessageHandlers(io,socket)
+    registeruserHandlers(io,socket)
+
     socket.on('disconnect',() => {
         log('user disconnected')
     })
