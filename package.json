@@ -1,5 +1,5 @@
 {
-  "name": "ll",
+  "name": "vk_mini_apps_server_learn",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/foxliza26/lulya.git"
+    "url": "git+https://github.com/Katsysiro/vk_mini_apps_server_learn.git"
   },
-  "author": "ll",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/foxliza26/lulya/issues"
+    "url": "https://github.com/Katsysiro/vk_mini_apps_server_learn/issues"
   },
-  "homepage": "https://github.com/foxliza26/lulya#readme",
+  "homepage": "https://github.com/Katsysiro/vk_mini_apps_server_learn#readme",
   "dependencies": {
     "lowdb": "^1.0.0",
     "nanoid": "^3.3.1",
